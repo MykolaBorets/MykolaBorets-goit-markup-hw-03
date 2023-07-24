@@ -10,8 +10,12 @@
   --color-overlay: #2e2f42;
   --color-hero-background: #2e2f42;
   --color-hero-title: #ffffff;
+  --color-advantages-background: #ffffff;
   --color-team-card-background: #ffffff;
+  --color-header-background: #ffffff;
+  --color-activity-background: #ffffff;
   --color-modal-background: #fcfcfc;
+  --color-portfolio-background: #ffffff;
 }
 /* **************************************************** */
 body {
@@ -20,8 +24,17 @@ body {
   background-color: var(--color-team-card-background);
 }
 
+header {
+  border-bottom: 1px solid var(--color-accent, #e7e9fc);
+  background: var(--color-header-background, #ffffff);
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
 footer {
   background-color: var(--color-overlay);
+  padding-top: 101.5px;
+  padding-bottom: 100px;
 }
 
 address {
@@ -41,7 +54,65 @@ button {
   list-style-type: none;
 }
 
-/* ***************************************************** */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo-nav {
+  display: flex;
+  align-items: center;
+  gap: 76px;
+}
+
+.list-nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
 
 .logo {
   color: var(--color-primary-brand);
@@ -52,13 +123,20 @@ button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+
 .logo-end {
   color: var(--color-dark);
 }
 
-/* .contact-us {
+.contact-us {
+  margin-left: auto;
+}
 
-} */
+.contact-nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
 
 .navigation-item {
   color: var(--color-dark);
@@ -80,10 +158,11 @@ button {
   color: var(--color-pressed-state);
 }
 
-/* ******************************************************* */
-
 .hero {
   background-color: var(--color-hero-background);
+  max-width: 100%;
+  padding: 188px 0px;
+  margin: 0 auto;
 }
 
 .hero-title {
@@ -92,6 +171,10 @@ button {
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
+  width: 496px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 48px;
 }
 
 .hero-btn {
@@ -102,6 +185,12 @@ button {
   line-height: 1.5;
   letter-spacing: 0.04em;
   background-color: var(--color-primary-brand);
+  display: block;
+  padding: 16px 32px;
+  margin: 0 auto;
+  gap: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .hero-btn:hover,
@@ -109,10 +198,20 @@ button {
   background-color: var(--color-pressed-state);
 }
 
-/* ******************************************************* */
-/* .advantages {
+.advantages {
+  background-color: var(--color-advantages-background);
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
 
-} */
+.advantages-list {
+  display: flex;
+  gap: 24px;
+}
+
+.advantages-item {
+  width: calc((100% - 3 * 24px) / 4);
+}
 
 .advantages-subtitle {
   color: var(--color-dark);
@@ -120,6 +219,7 @@ button {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 .advantages-text {
   color: var(--color-text);
@@ -129,9 +229,9 @@ button {
   letter-spacing: 0.02em;
 }
 
-/* ******************************************************* */
-/* .activity {
-} */
+.activity {
+  background-color: var(--color-activity-background);
+}
 
 .activity-title {
   color: var(--color-dark);
@@ -141,16 +241,29 @@ button {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  margin-bottom: 72px;
 }
 
-/* ******************************************************* */
+.activity-list {
+  display: flex;
+  gap: 24px;
+  padding-bottom: 120px;
+}
 
 .team {
   background-color: var(--color-light-mode-background);
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.team-list {
+  display: flex;
+  gap: 24px;
 }
 
 .team-list-item {
   background-color: var(--color-team-card-background);
+  width: calc((100% - 3 * 24px) / 4);
 }
 
 .team-title {
@@ -161,6 +274,7 @@ button {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  margin-bottom: 72px;
 }
 
 .team-subtitle {
@@ -170,6 +284,7 @@ button {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  margin-top: 32px;
 }
 .team-text {
   color: var(--color-text);
@@ -178,13 +293,9 @@ button {
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin-top: 8px;
+  padding-bottom: 32px;
 }
-
-/* ******************************************************* */
-
-/* .bottom {
-
-} */
 
 .bottom-logo-end {
   color: var(--color-light-mode-background);
@@ -202,9 +313,23 @@ button {
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin-top: 17.5px;
+  width: 264px;
+  height: 72px;
 }
 
-/* ************************************************************** */
+.portfolio {
+  background-color: var(--color-portfolio-background);
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
+.filtr-btn {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 72px;
+}
 
 .portfolio-filtr-btn {
   color: var(--color-primary-brand);
@@ -215,6 +340,10 @@ button {
   letter-spacing: 0.04em;
   background: var(--color-light-mode-background);
   cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid var(--color-accent);
+  background: var(--color-light-mode-background);
+  padding: 12px 24px;
 }
 
 .portfolio-filtr-btn:hover,
@@ -223,12 +352,25 @@ button {
   background-color: var(--color-pressed-state);
 }
 
+.portfolio-cards {
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+}
+
+.item-portfolio-card {
+  width: calc((100% - 48px) / 3);
+}
+
 .portfolio-cards-title {
   color: var(--color-dark);
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  margin: 32px 16px 8px;
 }
 
 .portfolio-cards-text {
@@ -237,4 +379,5 @@ button {
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin: 0px 16px 32px;
 }
