@@ -31,7 +31,6 @@ header {
 
 footer {
   background-color: var(--color-overlay);
-  padding-bottom: 100px 0;
 }
 
 address {
@@ -94,18 +93,22 @@ img {
   padding: 0 15px;
 }
 
+.upper {
+  padding: 24px 0;
+}
+
 .header-nav {
   display: flex;
   align-items: center;
 }
 
-.logo-nav {
+.logo-navi {
   display: flex;
   align-items: center;
   gap: 76px;
 }
 
-.list-nav {
+.list-navi {
   display: flex;
   align-items: center;
   gap: 40px;
@@ -142,6 +145,9 @@ img {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+}
+
+.navigation-link {
   padding: 24px 0 24px;
 }
 
@@ -252,6 +258,10 @@ img {
   gap: 24px;
 }
 
+.activity-item {
+
+}
+
 .team {
   background-color: var(--color-light-mode-background);
   padding-top: 120px;
@@ -291,8 +301,9 @@ img {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  margin-top: 8px;
+  margin-bottom: 8px;
 }
+
 .team-text {
   color: var(--color-text);
   text-align: center;
@@ -300,8 +311,10 @@ img {
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin-top: 8px;
-  padding-bottom: 32px;
+}
+
+.bottom {
+  padding: 100px 0;
 }
 
 .bottom-logo {
@@ -368,7 +381,7 @@ img {
 .portfolio-filtr-btn:focus {
   color: var(--color-hero-title);
   background-color: var(--color-pressed-state);
-  border: 1px solid transparent
+  border: 1px solid transparent;
 }
 
 .portfolio-cards {
@@ -386,6 +399,7 @@ img {
 .portfolio-cards-total {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
+  border-top: none;
 }
 
 .portfolio-cards-title {
